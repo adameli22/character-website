@@ -14,14 +14,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <h1>Star wars</h1>
-      </div>
-
-      <div>
-        <h1>Pokemon</h1>
-      </div>
-
       <div className={styles.RMcard}>
         <Link href="rickandmorty">
           <Image
@@ -31,6 +23,15 @@ const Home: NextPage = () => {
             height="100"
           />
         </Link>
+      </div>
+
+      <div>
+        coming soon
+        <div>
+          <h1>Star wars</h1>
+          <h1>Pokemon</h1>
+          <h1>Harry Potter</h1>
+        </div>
       </div>
     </div>
   );

@@ -40,16 +40,14 @@ const RickAndMortyPage: NextPage<{
 
   return (
     <div className={styles.body}>
-      <div className={styles.logo}>
-        <Image
-          src={RMlogo}
-          alt="rick and morty logo"
-          width="500"
-          height="200"
-        />
-      </div>
-
       <div className={styles.bar}>
+        <Pagination
+          count={page_info.pages}
+          page={page}
+          shape="rounded"
+          color="secondary"
+          onChange={(_, pageNumber) => setPage(pageNumber)}
+        />
         <div className="search-container">
           <form className={styles.form_nosubmit}>
             <input
@@ -59,12 +57,13 @@ const RickAndMortyPage: NextPage<{
             />
           </form>
         </div>
-        <Pagination
-          count={page_info.pages}
-          page={page}
-          shape="rounded"
-          color="secondary"
-          onChange={(_, pageNumber) => setPage(pageNumber)}
+      </div>
+      <div className={styles.logo}>
+        <Image
+          src={RMlogo}
+          alt="rick and morty logo"
+          width="500"
+          height="200"
         />
       </div>
 
