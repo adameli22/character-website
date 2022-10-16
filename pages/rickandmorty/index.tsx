@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from "next"
+import { GetServerSideProps, NextPage } from "next"
 import Head from 'next/head'
 import Image from 'next/image'
 import RMlogo from "../../logos/rickandmortylogo.png"
@@ -8,18 +8,27 @@ import imageLoader from "../../imageLoader";
 import Pagination from "@mui/material/Pagination";
 import { useEffect, useState } from "react"
 import axios from "axios"
-import useSWR from 'swr'
 import Link from "next/link";
-import { lightGreen, purple, red } from '@mui/material/colors';
+import Modal from "react-modal";
+import { useRouter } from "next/router";
+import RMcharacter from "../../components/RMcharacter";
+
+
+
+Modal.setAppElement("#__next")
 
 
 const RickAndMortyPage: NextPage<{ characters: RM_Character[], page_info: Info }> = ({ characters, page_info }) => {
 
-
+    const router = useRouter()
 
     const [page, setPage] = useState(1)
 
     const [_characters, setCharacters] = useState(characters)
+
+    const [selectedChar, setselectedChar] = useState<RM_Character>()
+
+
 
     useEffect(() => {
         const fetchPage = async () => {
@@ -29,6 +38,7 @@ const RickAndMortyPage: NextPage<{ characters: RM_Character[], page_info: Info }
 
         }
         fetchPage();
+
     }, [page])
 
 
@@ -62,8 +72,10 @@ const RickAndMortyPage: NextPage<{ characters: RM_Character[], page_info: Info }
 
                 {_characters.map((character) => {
                     return <div className={styles.character} key={character.id}>
-                        <Link href={`/rickandmorty/${character.id}`}>
-                            <div>
+                        <Link href={`/rickandmorty/?id=${character.id}`} as={`/rickandmorty/${character.id}`} scroll={false}>
+
+                            <div onClick={() => setselectedChar(character)}>
+                            
                                 <Image
                                     loader={imageLoader}
                                     unoptimized
@@ -94,12 +106,21 @@ const RickAndMortyPage: NextPage<{ characters: RM_Character[], page_info: Info }
                     onChange={(_, pageNumber) => setPage(pageNumber)}
                 />
             </div>
+
+            {selectedChar && <Modal
+                className={styles.mymodal}
+                isOpen={!!router.query.id}
+                onRequestClose={() => router.push("/rickandmorty",undefined, { scroll: false })}
+                overlayClassName={styles.myoverlay}
+            >
+
+              
+
+                <RMcharacter character={selectedChar} />
+            </Modal>}
         </div>
     )
 }
-
-
-
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const res = await axios.get(`https://rickandmortyapi.com/api/character`);
