@@ -1,5 +1,5 @@
 const imageLoader = ({ src }: { src: string }) => {
-    return src
-}
+  return src;
+};
 
-export default imageLoader
+export default imageLoader;

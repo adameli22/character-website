@@ -1,9 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import RMlogo from "../logos/rickandmortylogo.png"
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import RMlogo from "../logos/rickandmortylogo.png";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -15,27 +15,25 @@ const Home: NextPage = () => {
       </Head>
 
       <div>
-      <h1>Star wars</h1>
+        <h1>Star wars</h1>
       </div>
 
       <div>
-      <h1>Pokemon</h1>
+        <h1>Pokemon</h1>
       </div>
 
-       <div className={styles.RMcard}>
+      <div className={styles.RMcard}>
         <Link href="rickandmorty">
-        <Image 
-        src={RMlogo}
-        alt="rick and morty logo"
-        width="300"
-        height="100"
-        />
+          <Image
+            src={RMlogo}
+            alt="rick and morty logo"
+            width="300"
+            height="100"
+          />
         </Link>
-
-        </div>
-
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
