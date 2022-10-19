@@ -3,12 +3,15 @@ import axios from "axios";
 import { RM_Character } from "../../types/RM_types";
 import RMcharacter from "../../components/RMcharacter";
 import styles from "../../styles/RM.module.css";
+import classNames from "classnames";
 
 const RM_character_page: NextPage<{ character: RM_Character }> = ({
   character,
 }) => {
   return (
-    <div className={styles.body}>
+    <div
+      className={classNames([styles.body, styles.characterPageBody].join(" "))}
+    >
       <div>
         <RMcharacter character={character} />
       </div>

@@ -1,0 +1,33 @@
+.paginationWrapper {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.separator {
+  width: 1rem;
+  margin: 0 0.25rem;
+}
+
+.pageItem {
+  background: transparent;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.25rem;
+  border-radius: 5px;
+  font-family: "VT323", monospace;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.pageItem:hover {
+  opacity: 0.6;
+  box-shadow: transparent 0px 0px 0px 1px, transparent 0px 0px 0px 4px,
+    rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.active {
+  background-color: #9c27b0;
+  color: white;
+}
