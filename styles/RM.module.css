@@ -4,6 +4,10 @@
   background: url("/rmbg.png");
 }
 
+.characterPageBody {
+  height: 100vh;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -120,26 +124,39 @@
   margin: 19px 0;
 }
 
-.bar {
+.bar_top {
   display: flex;
-  max-width: 100%;
-  width: 100%;
+  max-width: 20%;
+  border-radius: 10px;
   margin: auto;
   justify-content: center;
   background-color: #b1dbeb;
   box-shadow: 1px 2px 10px 4px #8bce0f;
   height: 3rem;
   align-items: center;
-  gap: 5rem;
+}
+
+.bar_bottom {
+  display: flex;
+  max-width: 100%;
+  width: 20%;
+  margin: auto;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: #b1dbeb;
+  box-shadow: 1px 2px 10px 4px #8bce0f;
+  height: 3.5rem;
+  align-items: center;
 }
 
 .form_nosubmit {
   border: none;
   padding: 0;
+  float: right;
 }
 
 .input_nosubmit {
-  width: 260px;
+  width: 300px;
   border: 1px solid #b1dbeb;
   border-radius: 10px;
   display: block;
@@ -153,4 +170,9 @@
 
 .input_nosubmit:focus {
   outline: 3px solid #8bce0f;
+}
+
+.search_container {
+  display: flex;
+  width: 650px;
 }
