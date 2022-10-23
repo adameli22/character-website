@@ -12,17 +12,16 @@ const RMcharacterModel = ({ character }: Props) => {
     <div>
       <div key={character.id}>
         <article className={styles.modal_content}>
-          <figure className={styles.figure}>
-            <Image
-              className={styles.figureImage}
-              loader={imageLoader}
-              unoptimized
-              src={character.image}
-              alt={character.name}
-              width="200"
-              height="200"
-            />
-          </figure>
+          <Image
+            className={styles.figureImage}
+            loader={imageLoader}
+            unoptimized
+            src={character.image}
+            alt={character.name}
+            width="200"
+            height="200"
+          />
+
           <div className={styles.modalInfo}>
             <h2>{character.name}</h2>
 

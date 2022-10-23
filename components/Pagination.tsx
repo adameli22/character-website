@@ -123,15 +123,15 @@ export const PaginationComponent = ({
           </button>
         )}
 
-        {/* chenged this button  */}
+        {/* previous page button */}
 
         {page === 6 && totalPages > 5 && (
           <button
-            onClick={() => handlePagination(page + 2)}
+            onClick={() => handlePagination(page - 1)}
             type="button"
             className={styles.pageItem}
           >
-            {page + 2}
+            {page - 1}
           </button>
         )}
 

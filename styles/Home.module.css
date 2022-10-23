@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-
 .body {
   --bg-color: rgb(20, 20, 20);
   --card-color: rgb(23, 23, 23);
@@ -18,7 +17,7 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;  
+  gap: 20px;
   max-width: 1000px;
   width: calc(100% - 20px);
 }
@@ -31,7 +30,7 @@
   height: 220px;
   flex-direction: column;
   position: relative;
-  width: 300px;  
+  width: 300px;
 }
 
 .card:hover::before {
@@ -53,16 +52,16 @@
 
 .card::before {
   background: radial-gradient(
-    800px circle, 
+    800px circle,
     rgba(255, 255, 255, 0.06),
     transparent 40%
   );
   z-index: 3;
 }
 
-.card::after {  
+.card::after {
   background: radial-gradient(
-    600px circle, 
+    600px circle,
     rgba(255, 255, 255, 0.4),
     transparent 40%
   );
@@ -83,14 +82,18 @@
 
 /* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
 
-.h1, .h2, .h3, .h4, .span {
+.h1,
+.h2,
+.h3,
+.h4,
+.span {
   color: rgb(240, 240, 240);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   margin: 0px;
 }
 
-.i {  
+.i {
   color: rgb(240, 240, 240);
 }
 
@@ -111,9 +114,7 @@
   display: flex;
   flex-grow: 1;
   justify-content: center;
-  
 }
-
 
 .card_info_title > h3 {
   font-size: 1.1em;
@@ -128,44 +129,44 @@
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
   .body {
-    align-items: flex-start;  
+    align-items: flex-start;
     overflow: auto;
   }
-  
-  .cards {    
+
+  .cards {
     max-width: 1000px;
     padding: 10px 0px;
   }
-  
+
   .card {
     flex-shrink: 1;
     width: calc(50% - 4px);
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .card {
     height: 180px;
   }
-  
+
   .card_image {
-    height: 80px;  
+    height: 80px;
   }
-  
+
   .card_image > i {
     font-size: 3em;
   }
-    
+
   .card_info_wrapper {
     padding: 0px 10px;
   }
-  
-  .card_info > i { 
-    font-size: 0.8em; 
+
+  .card_info > i {
+    font-size: 0.8em;
   }
-  
+
   .card_info_title > h3 {
     font-size: 0.9em;
   }
@@ -176,7 +177,7 @@
   }
 }
 
-@media(max-width: 320px) {
+@media (max-width: 320px) {
   .card {
     width: 100%;
   }

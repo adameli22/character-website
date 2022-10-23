@@ -12,7 +12,7 @@ const RM_character_page: NextPage<{ character: RM_Character }> = ({
     <div
       className={classNames([styles.body, styles.characterPageBody].join(" "))}
     >
-      <div>
+      <div className={styles.character_page}>
         <RMcharacter character={character} />
       </div>
     </div>
