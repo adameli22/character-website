@@ -25,7 +25,7 @@ export const PaginationComponent = ({
           &lt;
         </button>
         {/* first page button */}
-        {totalPages >= 2 && (
+        {totalPages > 1 && (
           <button
             onClick={() => handlePagination(1)}
             type="button"
@@ -50,7 +50,7 @@ export const PaginationComponent = ({
           </button>
         )}
 
-        {totalPages >= 3 && (
+        {totalPages > 3 && (
           <button
             onClick={() => handlePagination(3)}
             type="button"
@@ -62,7 +62,7 @@ export const PaginationComponent = ({
             {3}
           </button>
         )}
-        {totalPages >= 4 && (
+        {totalPages > 4 && (
           <button
             onClick={() => handlePagination(4)}
             type="button"
@@ -74,7 +74,7 @@ export const PaginationComponent = ({
             {4}
           </button>
         )}
-        {totalPages >= 5 && (
+        {totalPages > 5 && (
           <button
             onClick={() => handlePagination(5)}
             type="button"
@@ -86,11 +86,12 @@ export const PaginationComponent = ({
             {5}
           </button>
         )}
-        {/* left arrow button */}
+
+        {/* seporator for the first page numbers */}
         {page > 5 && <div className={styles.separator}>...</div>}
 
         {/* button for the second last page */}
-        {page === totalPages && totalPages > 3 && (
+        {page === totalPages && totalPages >= 5 && (
           <button
             onClick={() => handlePagination(page - 2)}
             type="button"
@@ -112,7 +113,7 @@ export const PaginationComponent = ({
 
         {/* this is the active page button*/}
 
-        {page! > 5 && page !== totalPages && (
+        {page !> 5 && page !== totalPages && (
           <button
             onClick={() => handlePagination(page)}
             type="button"
@@ -146,7 +147,7 @@ export const PaginationComponent = ({
         )}
 
         {/* seporator for the last page numbers */}
-        {page < totalPages - 2 && <div className={styles.separator}>...</div>}
+        {page < totalPages - 2 && totalPages > 6 && <div className={styles.separator}>...</div>}
 
         {/* button for the last page */}
         <button
