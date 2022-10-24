@@ -25,57 +25,67 @@ export const PaginationComponent = ({
           &lt;
         </button>
         {/* first page button */}
-        <button
-          onClick={() => handlePagination(1)}
-          type="button"
-          className={classNames(styles.pageItem, {
-            [styles.active]: page === 1,
-          })}
-        >
-          {1}
-        </button>
+        {totalPages >= 2 && (
+          <button
+            onClick={() => handlePagination(1)}
+            type="button"
+            className={classNames(styles.pageItem, {
+              [styles.active]: page === 1,
+            })}
+          >
+            {1}
+          </button>
+        )}
 
-        <button
-          onClick={() => handlePagination(2)}
-          type="button"
-          hidden={page > 5}
-          className={classNames(styles.pageItem, {
-            [styles.active]: page === 2,
-          })}
-        >
-          {2}
-        </button>
+        {totalPages >= 2 && (
+          <button
+            onClick={() => handlePagination(2)}
+            type="button"
+            hidden={page > 5}
+            className={classNames(styles.pageItem, {
+              [styles.active]: page === 2,
+            })}
+          >
+            {2}
+          </button>
+        )}
 
-        <button
-          onClick={() => handlePagination(3)}
-          type="button"
-          hidden={page > 5}
-          className={classNames(styles.pageItem, {
-            [styles.active]: page === 3,
-          })}
-        >
-          {3}
-        </button>
-        <button
-          onClick={() => handlePagination(4)}
-          type="button"
-          hidden={page > 5}
-          className={classNames(styles.pageItem, {
-            [styles.active]: page === 4,
-          })}
-        >
-          {4}
-        </button>
-        <button
-          onClick={() => handlePagination(5)}
-          type="button"
-          hidden={page > 5}
-          className={classNames(styles.pageItem, {
-            [styles.active]: page === 5,
-          })}
-        >
-          {5}
-        </button>
+        {totalPages >= 3 && (
+          <button
+            onClick={() => handlePagination(3)}
+            type="button"
+            hidden={page > 5}
+            className={classNames(styles.pageItem, {
+              [styles.active]: page === 3,
+            })}
+          >
+            {3}
+          </button>
+        )}
+        {totalPages >= 4 && (
+          <button
+            onClick={() => handlePagination(4)}
+            type="button"
+            hidden={page > 5}
+            className={classNames(styles.pageItem, {
+              [styles.active]: page === 4,
+            })}
+          >
+            {4}
+          </button>
+        )}
+        {totalPages >= 5 && (
+          <button
+            onClick={() => handlePagination(5)}
+            type="button"
+            hidden={page > 5}
+            className={classNames(styles.pageItem, {
+              [styles.active]: page === 5,
+            })}
+          >
+            {5}
+          </button>
+        )}
         {/* left arrow button */}
         {page > 5 && <div className={styles.separator}>...</div>}
 
