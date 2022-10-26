@@ -113,7 +113,7 @@ export const PaginationComponent = ({
 
         {/* this is the active page button*/}
 
-        {page !> 5 && page !== totalPages && (
+        {page! > 5 && page !== totalPages && (
           <button
             onClick={() => handlePagination(page)}
             type="button"
@@ -147,7 +147,9 @@ export const PaginationComponent = ({
         )}
 
         {/* seporator for the last page numbers */}
-        {page < totalPages - 2 && totalPages > 6 && <div className={styles.separator}>...</div>}
+        {page < totalPages - 2 && totalPages > 6 && (
+          <div className={styles.separator}>...</div>
+        )}
 
         {/* button for the last page */}
         <button

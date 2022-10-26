@@ -3,15 +3,25 @@
 .body {
   --bg-color: rgb(20, 20, 20);
   --card-color: rgb(23, 23, 23);
-
   align-items: center;
   background-color: var(--bg-color);
+
   display: flex;
   height: 100vh;
   justify-content: center;
   margin: 0px;
   overflow: hidden;
   padding: 0px;
+}
+
+.videoBG {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .cards {
