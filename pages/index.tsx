@@ -13,8 +13,8 @@ const Home: NextPage = () => {
   const [bg, setBg] = useState("");
   const [Video, setVideo] = useState("");
   function changeBg(video: any) {
+    setBg("transparent");
     setVideo(video);
-    setBg("");
   }
 
   return (
