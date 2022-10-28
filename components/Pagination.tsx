@@ -124,7 +124,7 @@ export const PaginationComponent = ({
         )}
 
         {/* generates the next number in the container */}
-        {page! > 5 && page < totalPages - 1 && (
+        {page! >= 5 && page < totalPages - 1 && (
           <button
             onClick={() => handlePagination(page + 1)}
             type="button"
@@ -136,13 +136,13 @@ export const PaginationComponent = ({
 
         {/* previous page button */}
 
-        {page === 6 && totalPages > 5 && (
+        {page === 6 && totalPages >= 5 && (
           <button
-            onClick={() => handlePagination(page - 1)}
+            onClick={() => handlePagination(page + 2)}
             type="button"
             className={styles.pageItem}
           >
-            {page - 1}
+            {page + 2}
           </button>
         )}
 
