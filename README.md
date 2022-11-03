@@ -22,4 +22,4 @@ The app was made using NextJs
 
 ### DEMO
 
-[Character Website](https://character-website.vercel.app/rickandmorty)
+[Character Website](https://character-website.vercel.app/)
