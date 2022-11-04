@@ -15,13 +15,13 @@ const Home: NextPage = () => {
 
   function changeBg(video: any) {
     setBg("none");
-    //setBg("transparent");
+    
     setVideo(video);
   }
 
   function stopVideo() {
     setBg("");
-    setVideo("");
+    //setVideo("");
   }
 
   return (
