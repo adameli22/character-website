@@ -12,16 +12,17 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   const [bg, setBg] = useState("");
   const [Video, setVideo] = useState("");
+  const [poster, setPoster] = useState("");
 
-  function changeBg(video: any) {
+  function changeBg(video: any, poster:any) {
     setBg("none");
-    
+    setPoster(poster)
     setVideo(video);
   }
 
   function stopVideo() {
     setBg("");
-    //setVideo("");
+    setVideo("");
   }
 
   return (
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
       </Head>
 
       <video
+        poster={poster}
         loop
         autoPlay
         muted
@@ -45,7 +47,7 @@ const Home: NextPage = () => {
         <Link href="rickandmorty">
           <div
             className={styles.card}
-            onMouseOver={() => changeBg("/RMintro.mp4")}
+            onMouseOver={() => changeBg("/RMintro.mp4", "RMposter.png")}
             onMouseLeave={() => stopVideo()}
           >
             <div className={styles.card_content}>
@@ -70,7 +72,7 @@ const Home: NextPage = () => {
         <Link href="starwars">
           <div
             className={styles.card}
-            onMouseOver={() => changeBg("/SWintro.mp4")}
+            onMouseOver={() => changeBg("/SWintro.mp4", "SWposter.png")}
             onMouseLeave={() => stopVideo()}
           >
             <div className={styles.card_content}>
