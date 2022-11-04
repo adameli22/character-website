@@ -1,14 +1,14 @@
 ## Character Website
 
-This is a nextJs react app that fetches and displays data from API´s dedicated to characters from movies and tv shows.
+This is a nextJs react app that fetches and displays data from API´s dedicated to characters from movies:movie_camera: and TV shows:tv:.
 
 ### Pages
 
-- "/": Home page (View all awailable movies or TV shows );
+- "/": Home page (View all available movies:movie_camera: or TV shows:tv: );
 
 for each movie or tv show you can access these pages:
 
-- "/[movie/show]": Page with a list of all characters.
+- "/[movie/show]": Page with a list of all characters from the selected movie:movie_camera: or TV show:tv:.
 - "/[movie/show]/:id": Specific character's page.
 
 ### Technologies used in this project
