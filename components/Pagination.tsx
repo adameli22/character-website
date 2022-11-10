@@ -1,5 +1,4 @@
 import classNames from "classnames";
-
 import styles from "../styles/pagination.module.css";
 
 interface Props {
