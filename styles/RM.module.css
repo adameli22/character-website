@@ -1,14 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 .body {
-  background: url("/rmbg.png");
+  background: url("/rickandmorty/rmbg.png");
   min-height: 100vh;
 }
-
-.characterPageBody {
-  height: 100vh;
-}
-
 .logo {
   display: flex;
   justify-content: center;
@@ -16,14 +11,16 @@
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
   margin: auto;
   padding: 2rem;
-  min-height: 590px;
 }
 
 .character_page {
@@ -132,22 +129,28 @@
   border-radius: 10px;
   margin: auto;
   justify-content: center;
-  /* background-color: #b1dbeb;
-  box-shadow: 1px 2px 10px 4px #8bce0f; */
   height: 3rem;
   align-items: center;
 }
 
-.bar_bottom {
+.footer {
   display: flex;
-  width: 20%;
-  margin: auto;
-  border-radius: 10px 10px 0 0;
   justify-content: center;
+}
+
+.pagination_container {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 16px 32px;
+  margin-bottom: 32px;
   background-color: #68d4ff;
   box-shadow: 1px 2px 10px 4px #9ff107;
   height: 3.5rem;
-  align-items: center;
+  min-width: fit-content;
+  max-width: fit-content;
 }
 
 .form_nosubmit {
@@ -156,6 +159,7 @@
 }
 
 .input_nosubmit {
+  color: black;
   width: 300px;
   border: 1px solid #56c6f1;
   outline: 3px solid #56c6f1;
@@ -177,4 +181,16 @@
 .search_container {
   display: flex;
   width: 650px;
+}
+
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .pagination_container {
+    margin-bottom: 100px;
+  }
+  .container {
+    height: 560;
+  }
+
 }

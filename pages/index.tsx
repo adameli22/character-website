@@ -3,10 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import HPlogo from "../public/HPlogo.png";
-import RMlogo from "../public/RMlogo.png";
+import HPlogo from "../public/harrypotter/HPlogo.png";
+import RMlogo from "../public/rickandmorty/RMlogo.png";
 import SPlogo from "../public/SPlogo.png";
-import SWlogo from "../public/SWlogo.png";
+import SWlogo from "../public/starwars/SWlogo.png";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -14,9 +14,9 @@ const Home: NextPage = () => {
   const [Video, setVideo] = useState("");
   const [poster, setPoster] = useState("");
 
-  function changeBg(video: any, poster:any) {
+  function changeBg(video: any, poster: any) {
     setBg("none");
-    setPoster(poster)
+    setPoster(poster);
     setVideo(video);
   }
 
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </Link>
-        <Link href="">
+        {/* <Link href="">
           <div className={styles.card}>
             <div className={styles.card_content}>
               <div className={styles.card_image}>
@@ -143,7 +143,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
