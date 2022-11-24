@@ -38,5 +38,5 @@ next-env.d.ts
 /public/other
 /testing-stuff
 /pages/api
-/pages/portal.tsx
+/components/portal.tsx
 /styles/portal.module.css
