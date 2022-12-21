@@ -103,9 +103,7 @@
   margin: 0px;
 }
 
-.i {
-  color: rgb(240, 240, 240);
-}
+
 
 .card_image {
   align-items: center;
@@ -115,8 +113,10 @@
   overflow: hidden;
 }
 
-.card_image > i {
-  opacity: 1;
+.logo {
+  
+  aspect-ratio: 1/3;
+  object-fit: contain;
 }
 
 .card_info_wrapper {

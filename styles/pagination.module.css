@@ -1,5 +1,5 @@
 .paginationWrapper {
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   display: flex;
   justify-content: center;
   
@@ -14,9 +14,9 @@
 .pageItem {
   background: transparent;
   border: none;
-  height: 2rem;
-  width: 2rem;
-  margin: 0 0.25rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin: 0 0.5rem;
   border-radius: 5px;
   font-family: "VT323", monospace;
   font-size: medium;
@@ -30,7 +30,16 @@
     rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
-.active {
+.RMactive {
+  background-color: #d900ff;
+  color: white;
+}
+
+.SWactive {
+  background-color: #f82500;
+  color: white;
+}
+.HPactive {
   background-color: #d900ff;
   color: white;
 }

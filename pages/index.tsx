@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import HPlogo from "../public/harrypotter/HPlogo.png";
 import RMlogo from "../public/rickandmorty/RMlogo.png";
-import SPlogo from "../public/SPlogo.png";
 import SWlogo from "../public/starwars/SWlogo.png";
 import styles from "../styles/Home.module.css";
 
@@ -52,14 +51,12 @@ const Home: NextPage = () => {
           >
             <div className={styles.card_content}>
               <div className={styles.card_image}>
-                <i className={styles.i}>
                   <Image
+                    className={styles.logo}
                     src={RMlogo}
                     alt="rick and morty logo"
-                    width="300"
-                    height="130"
+                    
                   />
-                </i>
               </div>
               <div className={styles.card_info_wrapper}>
                 <div className={styles.card_info_title}>
@@ -77,14 +74,14 @@ const Home: NextPage = () => {
           >
             <div className={styles.card_content}>
               <div className={styles.card_image}>
-                <i className={styles.i}>
+                
                   <Image
+                    className={styles.logo}
                     src={SWlogo}
                     alt="Star Wars logo"
-                    width="250"
-                    height="110"
+                   
                   />
-                </i>
+                
               </div>
               <div className={styles.card_info_wrapper}>
                 <div className={styles.card_info_title}>
@@ -100,19 +97,18 @@ const Home: NextPage = () => {
           <div className={styles.card}>
             <div className={styles.card_content}>
               <div className={styles.card_image}>
-                <i className={styles.i}>
+                
                   <Image
+                    className={styles.logo}
                     src={HPlogo}
                     alt="Harry Potter logo"
-                    width="240"
-                    height="140"
                   />
-                </i>
+                
               </div>
               <div className={styles.card_info_wrapper}>
                 <div className={styles.card_info_title}>
                   <h4 className={styles.h4}>
-                    It does not do to dwell on dreams and forget to live.
+                    The boy who lived
                   </h4>
                   <h3 className={styles.h3}>Coming Soon</h3>
                 </div>
@@ -120,30 +116,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </Link>
-        {/* <Link href="">
-          <div className={styles.card}>
-            <div className={styles.card_content}>
-              <div className={styles.card_image}>
-                <i className={styles.i}>
-                  <Image
-                    src={SPlogo}
-                    alt="South Park logo"
-                    width="270"
-                    height="150"
-                  />
-                </i>
-              </div>
-              <div className={styles.card_info_wrapper}>
-                <div className={styles.card_info_title}>
-                  <h4 className={styles.h4}>
-                    Screw you guys, I&acute;m going home!
-                  </h4>
-                  <h3 className={styles.h3}>Coming Soon</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Link> */}
+        
       </div>
     </div>
   );

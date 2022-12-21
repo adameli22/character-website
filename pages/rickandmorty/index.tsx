@@ -48,12 +48,12 @@ const RickAndMortyPage = ({ characters, page_info }: Props) => {
 
   return (
     <>
-    <NavbarComponent/>
       <Head>
         <title>Rick and Morty</title>
         <meta name="description" content="Rick and Morty character list" />
         <link rel="icon" href="/rickandmorty/RMfavicon.png" />
       </Head>
+    <NavbarComponent color={"#56c6f1"}/>
       <div className={styles.body}>
         <div className={styles.logo}>
           <Image
@@ -64,16 +64,25 @@ const RickAndMortyPage = ({ characters, page_info }: Props) => {
           />
         </div>
         <div className={styles.bar_top}>
-          <form className={styles.form_nosubmit}>
+          <form className={styles.form_search}>
             <input
-              className={styles.input_nosubmit}
+              className={styles.input_search}
               type="search"
               placeholder="Search..."
               onChange={(e) => setInput(e.target.value)}
             />
           </form>
-        </div>
+          <div className={styles.pagination_container}>
+            <Pagination
+              pageName="rickandmorty"
+              currentPage={page}
+              totalItems={page_info.count}
+              itemsPerPage={20}
+              renderPageLink={handlePages}
+            />
+          </div>
 
+        </div>
         <div className={styles.container}>
           {_characters.map((character) => {
             return (
@@ -105,14 +114,7 @@ const RickAndMortyPage = ({ characters, page_info }: Props) => {
         </div>
 
         <footer className={styles.footer}>
-          <div className={styles.pagination_container}>
-            <Pagination
-              currentPage={page}
-              totalItems={page_info.count}
-              itemsPerPage={20}
-              renderPageLink={handlePages}
-            />
-          </div>
+          
         </footer>
 
         {selectedChar && (
