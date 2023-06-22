@@ -17,7 +17,7 @@ const RMcharacterModel = ({ character, id }: Props) => {
             className={styles.figureImage}
             loader={imageLoader}
             unoptimized
-            src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+            src={`/starwars/characters/${id}.jpg`}
             alt={character.name}
             width="200"
             height="200"
@@ -29,7 +29,7 @@ const RMcharacterModel = ({ character, id }: Props) => {
               <span>Gender: </span>
               <span>{character.gender}</span>
             </div>
-            <div>
+            <div >
               <span>Species: </span>
               <span>{character.species}</span>
             </div>
@@ -37,18 +37,6 @@ const RMcharacterModel = ({ character, id }: Props) => {
               <div>
                 <span>Mass: </span>
                 <span>{character.mass}</span>
-              </div>
-              <div>
-                <span>Hair color: </span>
-                <span>{character.hair_color}</span>
-              </div>
-              <div>
-                <span>Skin color: </span>
-                <span>{character.skin_color}</span>
-              </div>
-              <div>
-                <span>Eye color: </span>
-                <span>{character.eye_color}</span>
               </div>
               <div>
                 <span>Birth Year: </span>

@@ -44,3 +44,10 @@ next-env.d.ts
 /pages/api
 /components/portal.tsx
 /styles/portal.module.css
+
+
+# Harry potter
+/components/HPcharacter.tsx
+/styles/HP.module.css
+/pages/harrypotter
+/types/HP_types.ts

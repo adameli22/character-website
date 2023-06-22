@@ -42,7 +42,7 @@ const NavbarComponent = ({ color }: Props) => {
           </li>
 
           <li className={styles.nav_item} style={{ color: color }}>
-            <a href="" className={styles.nav_link}>
+            <a href="harrypotter" className={styles.nav_link}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"

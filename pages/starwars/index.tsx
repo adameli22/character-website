@@ -12,6 +12,7 @@ import SWcharacter from "../../components/SWcharacter";
 import SWlogo from "../../public/starwars/SWlogo.png";
 import styles from "../../styles/SW.module.css";
 import { SW_Character, SW_characterResults } from "../../types/SW_types";
+import { unwatchFile } from "fs";
 Modal.setAppElement("#__next");
 
 interface Props {
@@ -100,11 +101,12 @@ const StarWarsPage = ({ characters, characterCount }: Props) => {
                 >
                   <div onClick={() => SelectCharacter(character, id)}>
                     <Image
-                      unoptimized
+                    
+                      fill
                       src={`/starwars/characters/${id}.jpg`}
                       //src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
                       alt={character.name}
-                      fill
+                      
                     />
 
                     <div className={styles.character_info}>

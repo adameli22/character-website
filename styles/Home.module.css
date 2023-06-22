@@ -187,6 +187,12 @@
   }
 }
 
+.warning {
+  width: fit-content;
+  color: red;
+  
+}
+
 @media (max-width: 320px) {
   .card {
     width: 100%;

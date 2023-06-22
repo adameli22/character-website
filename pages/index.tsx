@@ -71,6 +71,7 @@ const Home: NextPage = () => {
             className={styles.card}
             onMouseOver={() => changeBg("/SWintro.mp4", "SWposter.png")}
             onMouseLeave={() => stopVideo()}
+
           >
             <div className={styles.card_content}>
               <div className={styles.card_image}>
@@ -79,7 +80,6 @@ const Home: NextPage = () => {
                     className={styles.logo}
                     src={SWlogo}
                     alt="Star Wars logo"
-                   
                   />
                 
               </div>
@@ -88,10 +88,15 @@ const Home: NextPage = () => {
                   <h4 className={styles.h4}>
                     A long time ago in a galaxy far, far away....
                   </h4>
+                  <div className={styles.warning}>
+            Warning: The star wars tap is very slow doe to the api not being very good
+                </div>
                 </div>
               </div>
             </div>
+            
           </div>
+          
         </Link>
         <Link href="">
           <div className={styles.card}>
