@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         <Link href="rickandmorty">
           <div
             className={styles.card}
-            onMouseOver={() => changeBg("/RMintro.mp4", "RMposter.png")}
+            onMouseOver={() => changeBg("/RMintro.webm", "RMposter.png")}
             onMouseLeave={() => stopVideo()}
           >
             <div className={styles.card_content}>
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
         <Link href="">
           <div
             className={styles.card}
-            onMouseOver={() => changeBg("/SWintro.mp4", "SWposter.png")}
+            onMouseOver={() => changeBg("/SWintro.webm", "SWposter.png")}
             onMouseLeave={() => stopVideo()}
 
           >

@@ -45,9 +45,9 @@ next-env.d.ts
 /styles/portal.module.css
 
 /components/Navbar.tsx
+/other_pages
 
 # star wars
-/pages/starwars
 /components/SWcharacter.tsx
 /styles/SW.module.css
 /types/SW_types.ts
@@ -55,7 +55,7 @@ next-env.d.ts
 
 
 # Harry potter
+/public/harrypotter/
 /components/HPcharacter.tsx
 /styles/HP.module.css
-/pages/harrypotter
 /types/HP_types.ts
