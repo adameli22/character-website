@@ -5,10 +5,12 @@
   --card-color: rgb(23, 23, 23);
   align-items: center;
   background-color: var(--bg-color);
+  
 
   display: flex;
   height: 100vh;
   justify-content: center;
+  
   margin: 0px;
   overflow: hidden;
   padding: 0px;
@@ -29,7 +31,6 @@
   flex-wrap: wrap;
   gap: 20px;
   max-width: 1000px;
-  width: calc(100% - 20px);
 }
 
 .card {

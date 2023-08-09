@@ -41,9 +41,17 @@ next-env.d.ts
 
 /public/other
 /testing-stuff
-/pages/api
 /components/portal.tsx
 /styles/portal.module.css
+
+/components/Navbar.tsx
+
+# star wars
+/pages/starwars
+/components/SWcharacter.tsx
+/styles/SW.module.css
+/types/SW_types.ts
+/public/starwars/characters
 
 
 # Harry potter

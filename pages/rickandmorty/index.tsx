@@ -53,7 +53,7 @@ const RickAndMortyPage = ({ characters, page_info }: Props) => {
         <meta name="description" content="Rick and Morty character list" />
         <link rel="icon" href="/rickandmorty/RMfavicon.png" />
       </Head>
-    <NavbarComponent color={"#56c6f1"}/>
+    
       <div className={styles.body}>
         <div className={styles.logo}>
           <Image

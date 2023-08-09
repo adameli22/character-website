@@ -66,7 +66,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </Link>
-        <Link href="starwars">
+        <Link href="">
           <div
             className={styles.card}
             onMouseOver={() => changeBg("/SWintro.mp4", "SWposter.png")}
@@ -88,40 +88,17 @@ const Home: NextPage = () => {
                   <h4 className={styles.h4}>
                     A long time ago in a galaxy far, far away....
                   </h4>
-                  <div className={styles.warning}>
+                  <h3 className={styles.h3}>Coming Soon</h3>
+                  {/* <div className={styles.warning}>
             Warning: The star wars tap is very slow doe to the api not being very good
-                </div>
+                </div> */}
                 </div>
               </div>
             </div>
             
           </div>
           
-        </Link>
-        <Link href="">
-          <div className={styles.card}>
-            <div className={styles.card_content}>
-              <div className={styles.card_image}>
-                
-                  <Image
-                    className={styles.logo}
-                    src={HPlogo}
-                    alt="Harry Potter logo"
-                  />
-                
-              </div>
-              <div className={styles.card_info_wrapper}>
-                <div className={styles.card_info_title}>
-                  <h4 className={styles.h4}>
-                    The boy who lived
-                  </h4>
-                  <h3 className={styles.h3}>Coming Soon</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Link>
-        
+        </Link>      
       </div>
     </div>
   );
